@@ -1,0 +1,63 @@
+<html 
+    xmlns:th="http://www.thymeleaf.org"	>
+    <head th:fragment="css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link th:href="@{/css/main.css}" rel="stylesheet" />
+        <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+        <title>Hello, world!</title>
+    </head>
+    <body>
+
+        <header th:fragment="navbar">
+            <!-- Fixed navbar -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+            <div class="container">
+                <a class="navbar-brand me-5"><Strong>CAR SHOP</Strong></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="item/create">ADD ITEM</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/showitems">SHOW ITEM</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/showorders">SHOW ORDER</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex me-5">
+                        <ul class="navbar-nav me-auto ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/logout">LOGOUT</a>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        </header>
+
+        <div class="container mt-5" th:fragment="head-content">
+            
+        </div>
+
+        <footer th:fragment="footer" class="footer ">
+            <div class="container ">
+                <span class="text-muted ">Place sticky footer content here.</span>
+            </div>
+        </footer>
+
+
+        <div th:fragment="scripts">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        </div>
+    </body>
+</html>
